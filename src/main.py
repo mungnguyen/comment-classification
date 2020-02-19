@@ -52,14 +52,14 @@ else:
 
     # Print to file
     with open('train-docs-after-preprocessing.txt', 'w') as f_train:
-    for item in train_docs:
-        f_train.write("%s\n" % item)
-    print("print train_docs to file successly")
+        for item in train_docs:
+            f_train.write("%s\n" % item)
+        print("print train_docs to file successly")
 
     with open('train-label-after-preprocessing.txt', 'w') as f_train_label:
-    for item in y_train:
-        f_train_label.write("%s\n" % item)
-    print("print train_lable to file successly")
+        for item in y_train:
+            f_train_label.write("%s\n" % item)
+        print("print train_lable to file successly")
 
 if os.path.isfile('test-docs-after-processing.txt'): 
     test_file = open("./test-docs-after-preprocessing.txt", "r")
@@ -80,14 +80,14 @@ else:
 
     # Print to file
     with open('test-docs-after-preprocessing.txt', 'w') as f_test:
-    for item in test_docs:
-        f_test.write("%s\n" % item)
-    print("print test_docs to file successly") 
+        for item in test_docs:
+            f_test.write("%s\n" % item)
+        print("print test_docs to file successly") 
 
     with open('test-label-after-preprocessing.txt', 'w') as f_test_label:
-    for item in y_test:
-        f_test_label.write("%s\n" % item)
-    print("print test_label to file successly")   
+        for item in y_test:
+            f_test_label.write("%s\n" % item)
+        print("print test_label to file successly")   
 
 # Vectorize
 print("Begin vectorize \n")
