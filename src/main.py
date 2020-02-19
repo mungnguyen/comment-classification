@@ -2,7 +2,9 @@ import os
 import string
 
 from pathlib import Path
+from datetime import datetime
 from preprocess import cleanAndPreprocess
+
 from sklearn.datasets import load_files
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics import classification_report as metric
