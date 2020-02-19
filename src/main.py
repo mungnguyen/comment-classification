@@ -96,13 +96,13 @@ print("Begin vectorize \n")
 # IF-IDF
 print("Begin tf-idf")
 train_tfidf = TfidfVectorizer(max_features=10000, min_df=5, max_df=0.7, encoding='utf-8', lowercase=False)
-X_train = train_tfidf.fit_transform(train_docs).toarray()
+X_train = train_tfidf.fit_transform(train_docs)
 
 print(f"Voca len: {len(train_tfidf.vocabulary_)}")
 
 print("Begin test tf-idf")
 test_tf_idf = TfidfVectorizer(min_df=5, max_df=0.7, encoding='utf-8', lowercase=False, vocabulary=train_tfidf.vocabulary_)
-X_test = test_tf_idf.fit_transform(test_docs).toarray()
+X_test = test_tf_idf.fit_transform(test_docs)
 print("End tf-idf")
 
 print("End vectorize \n")
